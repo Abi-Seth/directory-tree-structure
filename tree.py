@@ -83,7 +83,7 @@ class DirectoryTree:
         if node is None:
             node = self.root
 
-        prefix = "│   " * (level - 1) + "├── " if level > 0 else ""
+        prefix = "|   " * (level - 1) + "|-- " if level > 0 else ""
         print(f"{prefix}{node.name}")
 
         for i, child in enumerate(node.children.values()):
